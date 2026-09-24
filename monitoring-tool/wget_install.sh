@@ -3,6 +3,8 @@
 
 #!/bin/bash
 
+apt-get update
+
 wget https://prometheus.io/download/#:~:text=prometheus%2D3.14.0.linux%2Damd64.tar.gz
 
 tar xvfz prometheus-*.tar.gz
