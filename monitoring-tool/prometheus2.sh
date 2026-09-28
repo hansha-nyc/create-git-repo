@@ -47,7 +47,7 @@ sudo chown -R prometheus:prometheus /var/lib/prometheus
 # Creation of a systemd service                                                                                   #
 ###################################################################################################################
 
-sudo tee /etc /systemd/system/prometheus.service > /dev/null <<EOF
+sudo tee /etc/systemd/system/prometheus.service > /dev/null <<EOF
 [Unit]
 Description=Prometheus
 Wants=network-online.target
@@ -58,9 +58,9 @@ User=prometheus
 Group=prometheus
 Type=simple
 ExecStart=/usr/local/bin/prometheus \
-  --config.file /etc/prometheus/prometheus.yml
-  --storage.tsdb.path /var/lib/promtheus/ \
-  --web.console.templates=/etc/prometheus/consoles/ \
+  --config.file /etc/prometheus/prometheus.yml \
+  --storage.tsdb.path /var/lib/prometheus/ \
+  --web.console.templates=/etc/prometheus/consoles \
   --web.console.libraries=/etc/prometheus/console_libraries
 
   [Install]
