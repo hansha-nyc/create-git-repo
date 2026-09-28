@@ -25,6 +25,8 @@ curl -LO https://github.com/prometheus/prometheus/releases/download/v2.55.1/prom
 ###################################################################################################################
 
 tar xvf prometheus-3.15.0.linux-amd64.tar.gz
+cd prometheus-3.15.0.linux-amd64
+
 sudo cp prometheus /usr/local/bin 
 sudo promtool /usr/local/bin
 sudo chown prometheus:prometheus /usr/bin/local/prometheus
